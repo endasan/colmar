@@ -2,6 +2,61 @@
 
 html {
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #4a4a4a;
+}
+
+/* colors*/
+.white {
+  background-color: white;
+}
+
+.primary_white {
+  background-color: #f3f5f5;
+}
+
+.darkgrey {
+  background-color: #d8d8d8;
+}
+
+.lightgrey {
+  background-color: #eaebec;
+}
+
+.grey {
+  color: #9b9b9b;
+}
+.link_blue {
+  color: #4A90E2;
+}
+
+/*fonts, sizes and weights*/
+.ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.regular {
+  font-size: 1em;
+}
+
+.large {
+  font-size: 1.5em;
+}
+
+.xtra-large {
+  font-size: 2em;
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 400;  
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .main {
@@ -65,55 +120,57 @@ header {
   height: 4rem;
   position: fixed;
   z-index: 5;
-  background-color: white;
 }
 
-.desktop_header {
-  height: 100%;
+.desktop {
   display: flex;
+}
+
+.header {
+  height: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem;
 }
 
-.mobile_header {
+.mobile {
   display: none;
 }
 
-.desktop_header .colmar_title {
+.desktop .colmar_title {
   height: 2rem;
   display: flex;
   align-items: center;
 }
 
-.desktop_header img.logo {
+.desktop img.logo {
   height: 3rem;
   width: auto;
 }
 
-.desktop_header nav{
+.desktop nav{
   display: block;
 }
 
-.desktop_header nav a {
+.desktop nav a {
   padding: 0 .5rem;
 }
 
-.desktop_header nav a:first-child {
+.desktop nav a:first-child {
   padding-left: 0;
 }
 
-.desktop_header nav a:last-child {
+.desktop nav a:last-child {
   padding-right: 0;
 }
 
 @media only screen and (max-width: 720px){
 
-  .desktop_header {
+  .desktop {
     display: none;
   }
 
-  .mobile_header {
+  .mobile {
     width: 100%;
     height: 100%;
     display: flex;
@@ -126,7 +183,6 @@ header {
 
 .jumbotron {
   display: flex;
-  background-color: lightgrey;
 }
 
 .jumbotron .text_container {
@@ -149,7 +205,8 @@ header {
 .jumbotron .button {
   display: inline-block;
   padding: .5rem 2rem;
-  background-color: brown;
+  color: white;
+  background-color: #4a4a4a;
   text-align: center;
 }
 
@@ -203,10 +260,6 @@ header {
   padding-top: 0;
 }
 
-.information .content:last-child {
-  background-color: lightgrey;
-}
-
 .information .details p {
   padding: .5rem 0;
 }
@@ -254,17 +307,11 @@ header {
   }
 
   .information .content:last-child {
-    background-color: white;
     padding-bottom: 2rem;
   }
 }
 
 /*Courses Section*/
-
-.courses {
-  background-color: lightgrey;
-}
-
 .courses .grid {
   padding: 1rem 0;
 }
@@ -277,7 +324,6 @@ header {
 .courses .course {
   width: 33.3%;
   display: flex;
-  background-color: white;
   flex-direction: column;
   margin: 0 1rem;
 }
@@ -297,10 +343,6 @@ header {
 }
 
 @media only screen and (max-width: 720px){
-  .courses {
-    background-color: white;
-  }
-
   .courses .grid {
     padding: 2rem 0;
   }
@@ -308,14 +350,17 @@ header {
   .courses .row {
     flex-direction: column;
     align-items: center;
-    padding: 0;
+    padding: 0 1rem;
   }
 
   .courses .course {
     width: 100%;
-    display: block;
-    background-color: lightgrey;
+    display: flex;
     margin: .5rem 1rem;
+  }
+
+  .course .text_content {
+    padding: 1.5rem 1rem;
   }
 
   .course img, .text_content *{
@@ -337,8 +382,23 @@ header {
   padding-bottom: 2rem;
 }
 
-.thesis .content:first-child {
-  background-color: lightgrey;
+
+@media only screen and (max-width: 720px){
+  .thesis  .banner {
+    width: 100%;
+    padding: 0;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .thesis .content_pane,
+  .thesis .banner * {
+    display: none;
+  }
+
+  .thesis .banner video{
+    display: block;
+  }
 }
 
 /*Footer Section*/
@@ -352,4 +412,13 @@ footer {
 
 footer nav a {
   padding: 0 .5rem;
+}
+
+@media only screen and (max-width: 720px){
+  footer {
+    height: auto;
+  }
+  footer nav {
+    display: none;
+  }
 }
