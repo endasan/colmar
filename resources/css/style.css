@@ -28,8 +28,7 @@ p {
 }
 
 a {
-  transition: text-shadow 1s linear;
-  transition: border-color .5s ease-in;
+  transition: text-shadow 1s linear, border-color .5s ease-in;
 }
 
 a:hover {
